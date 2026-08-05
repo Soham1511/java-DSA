@@ -25,4 +25,4 @@ A collection of my Data Structures and Algorithms solutions implemented in Java.
 
 ## Purpose
 
-This repository documents my journey in mastering Data Structures and Algorithms for software engineering interviews and competitive programming.
+This repository documents my journey in mastering Data Structures and Algorithms for competitive programming.
