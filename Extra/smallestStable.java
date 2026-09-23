@@ -1,4 +1,4 @@
-class Solution {
+class smallestStable {
     public static int findStableIndex(int[] nums, int k) {
 
         int n = nums.length;
