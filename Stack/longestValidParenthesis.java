@@ -1,16 +1,24 @@
 import java.util.*;
 class longestValidParenthesis{
     public static void main(String[] args) {
-        String s = "";
-        Stack<Character> stack = new Stack<>();
+        String s = "(()";
+        Stack<Integer> stack = new Stack<>();
+        int length = Integer.MIN_VALUE;
+        stack.push(-1);
         for(int i = 0; i<s.length(); i++){
-            if(!stack.isEmpty() && stack.peek() == '(' && s.charAt(i) == ')'){
-                stack.pop();
+            if(s.charAt(i) == '('){
+                stack.push(i);
             }
             else{
-                stack.push(s.charAt(i));
+                stack.pop();
+                if (stack.isEmpty()) {
+                    stack.push(i);
+                }
+                else{
+                    length = Math.max(length, i - stack.peek());
+                }
             }
         }
-        System.out.println(s.length() - stack.size());
+        System.out.println(length);
     }
 }
